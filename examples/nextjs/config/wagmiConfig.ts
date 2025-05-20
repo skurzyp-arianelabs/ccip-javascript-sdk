@@ -7,6 +7,7 @@ import {
   optimismSepolia,
   polygonAmoy,
   sepolia,
+  hederaTestnet
 } from 'viem/chains';
 import { injected } from 'wagmi/connectors';
 
@@ -19,6 +20,7 @@ export const wagmiConfig: Config = createConfig({
     sepolia,
     optimismSepolia,
     polygonAmoy,
+    hederaTestnet,
   ],
   connectors: [injected()],
   transports: {
@@ -29,5 +31,6 @@ export const wagmiConfig: Config = createConfig({
     [sepolia.id]: http(),
     [optimismSepolia.id]: http(),
     [polygonAmoy.id]: http(),
+    [hederaTestnet.id]: http(),
   },
 });

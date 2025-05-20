@@ -8,6 +8,7 @@ import {
   avalancheFuji,
   baseSepolia,
   bscTestnet,
+  hederaTestnet,
   optimismSepolia,
   polygonAmoy,
   sepolia,
@@ -24,6 +25,7 @@ const tokensList: Token[] = [
       [optimismSepolia.id]: '0x8aF4204e30565DF93352fE8E1De78925F6664dA7',
       [polygonAmoy.id]: '0xcab0EF91Bee323d1A617c0a027eE753aFd6997E4',
       [sepolia.id]: '0xFd57b4ddBf88a4e07fF4e34C487b99af2Fe82a05',
+      [hederaTestnet.id]: '0x01Ac06943d2B8327a7845235Ef034741eC1Da352',
     },
     logoURL:
       'https://smartcontract.imgix.net/tokens/ccip-bnm.webp?auto=compress%2Cformat',
@@ -74,6 +76,17 @@ const tokensList: Token[] = [
       'https://smartcontract.imgix.net/tokens/usdc.webp?auto=compress%2Cformat',
     tags: ['stablecoin', 'default'],
   },
+  {
+    symbol: 'CCTWT',
+    address: {
+      [avalancheFuji.id]: '0xda89a6c2c9f6e8d94e4a65d8aee482908e9d709a',
+      [sepolia.id]: '0x74ef0b124f192e0990b5451ad12a4ec20fcf2b44',
+      [hederaTestnet.id]: '0x7c5c738b90f524081e834b6d99f539d58b4ff6df',
+    },
+    logoURL:
+      'https://smartcontract.imgix.net/tokens/ccip-bnm.webp?auto=compress%2Cformat',
+    tags: ['chainlink', 'default'],
+  },
 ];
 
 const chains = [
@@ -112,6 +125,11 @@ const chains = [
     logoURL:
       'https://d2f70xi62kby8n.cloudfront.net/bridge/icons/networks/polygon.svg?auto=compress%2Cformat',
   },
+  {
+    chain: hederaTestnet,
+    logoURL:
+      'https://d2f70xi62kby8n.cloudfront.net/bridge/icons/networks/hedera.svg?auto=compress%2Cformat',
+  },
 ];
 
 const linkContracts: AddressMap = {
@@ -122,6 +140,7 @@ const linkContracts: AddressMap = {
   [sepolia.id]: '0x779877A7B0D9E8603169DdbD7836e478b4624789',
   [optimismSepolia.id]: '0xE4aB69C077896252FAFBD49EFD26B5D171A32410',
   [polygonAmoy.id]: '0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904',
+  [hederaTestnet.id]: '0x90a386d59b9A6a4795a011e8f032Fc21ED6FEFb6',
 };
 
 const routerAddresses: AddressMap = {
@@ -132,6 +151,7 @@ const routerAddresses: AddressMap = {
   [sepolia.id]: '0x0BF3dE8c5D3e8A2B34D2BEeB17ABfCeBaf363A59',
   [optimismSepolia.id]: '0x114a20a10b43d4115e5aeef7345a1a71d2a60c57',
   [polygonAmoy.id]: '0x9C32fCB86BF0f4a1A8921a9Fe46de3198bb884B2',
+  [hederaTestnet.id]: '0x802C5F84eAD128Ff36fD6a3f8a418e339f467Ce4',
 };
 
 const chainSelectors = {
@@ -142,6 +162,7 @@ const chainSelectors = {
   [sepolia.id]: '16015286601757825753',
   [optimismSepolia.id]: '5224473277236331295',
   [polygonAmoy.id]: '16281711391670634445',
+  [hederaTestnet.id]: '222782988166878823',
 };
 
 export const networkConfig: NetworkConfig = {
